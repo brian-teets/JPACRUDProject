@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="nps_location")
+@Table(name = "nps_location")
 public class NPSLocation {
 	
 	@Id

@@ -11,6 +11,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class NPSLocationTest {
@@ -42,6 +43,7 @@ class NPSLocationTest {
 	}
 
 	@Test
+	@DisplayName("test NPSLocation entity mappings")
 	void test_NPSLocation_entity_mappings() {
 		assertNotNull(location);
 		assertEquals("Rocky Mountain National Park", location.getName());
