@@ -44,9 +44,9 @@ class NPSLocationTest {
 
 	@Test
 	@DisplayName("test NPSLocation entity mappings")
-	void test_NPSLocation_entity_mappings() {
+	void test_basic_NPSLocation_entity_mappings() {
 		assertNotNull(location);
-		assertEquals("Rocky Mountain National Park", location.getName());
+		assertEquals("Rocky Mountain National Park", location.getName()); 
 	}
 
 }
