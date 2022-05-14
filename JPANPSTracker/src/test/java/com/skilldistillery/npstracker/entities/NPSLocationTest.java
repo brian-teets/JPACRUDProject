@@ -2,6 +2,7 @@ package com.skilldistillery.npstracker.entities;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -46,7 +47,12 @@ class NPSLocationTest {
 	@DisplayName("test NPSLocation entity mappings")
 	void test_basic_NPSLocation_entity_mappings() {
 		assertNotNull(location);
-		assertEquals("Rocky Mountain National Park", location.getName()); 
+		assertEquals("Pearl Harbor", location.getName()); 
+		assertTrue(location.isHasVisited());
+		assertEquals(2015, location.getDateVisited().getYear());
+		assertEquals("Hawaii", location.getState());
+		assertEquals("Pacific West", location.getRegion());
+		assertEquals("National Memorial", location.getNpsDesignation()); 
 	}
 
 }

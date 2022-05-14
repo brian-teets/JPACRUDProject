@@ -22,11 +22,30 @@ public class NPSTrackerDAOImpl implements NPSTrackerDAO {
 		
 		return em.find(NPSLocation.class, NPSLocationId); 
 	}
-
+	
+	@Override
+	public List<NPSLocation> findByKeyword(String keyword) {
+		
+//		String jpql = "SELECT cust.email FROM Customer cust WHERE cust.firstName = :fName AND cust.lastName = :lName";
+//		email = em.createQuery(jpql, String.class)
+//				.setParameter("fName", fName)
+//				.setParameter("lName", lName)				
+//				.getSingleResult(); 
+		
+		String jpql = "SELECT loc FROM NPSLocation WHERE loc.name = :keyword OR loc.state = :keyword OR loc.region = :keyword"
+				+ " OR loc.npsDesignation = :keyword OR loc.description = :keyword";
+		
+		List<NPSLocation> locations = em.createQuery(jpql, NPSLocation.class)
+				.setParameter("keyword", keyword)
+				.getResultList();   
+		
+		return locations; 
+	}
+	
 	@Override
 	public List<NPSLocation> findAll() {
-		// TODO Auto-generated method stub
-		return null; 
-	}
+		String jpql = "SELECT loc FROM NPSLocation loc";
+		return em.createQuery(jpql, NPSLocation.class).getResultList(); 
+	} 
 
 }
