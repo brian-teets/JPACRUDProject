@@ -11,12 +11,12 @@
 <body>
 <div>
 	<h1>My NPS Tracker</h1>
-
+	<h5>Search for a location by Id</h5>
 	<form action="getLocation.do?npsid=${location.id}" method="GET">
-		Location ID: <input type="text" name="npsid" size="3"> <input
-			type="submit" value="Find Location">
-
+		Location ID: <input type="text" name="npsid" size="3"> 
+		<input type="submit" value="Find Location"> 
 	</form>
+	<hr>
 	</div>
 	<div>
 	<h5>Click the location name to view more details.</h5>

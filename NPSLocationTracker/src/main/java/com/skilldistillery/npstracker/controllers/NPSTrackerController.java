@@ -29,5 +29,11 @@ public class NPSTrackerController {
 		return "results/singleLocation"; 
 	}
 	
+//	@RequestMapping
+//	public NPSLocation createLocation() {
+//		NPSLocation
+//		return "results/singleLocation"; 
+//	}
+	
 
 }

@@ -11,6 +11,8 @@
 <body>
 <div>
 <h2>List of Locations Results</h2>
+<c:choose>
+			<c:when test="${! empty locations}">
 <table>
 		<thead>
 			<tr>
@@ -34,6 +36,11 @@
 			</c:forEach> 
 		</tbody>
 	</table>
+	</c:when>
+	<c:otherwise>
+				<h5>No locations found based on search criteria.</h5>
+			</c:otherwise>
+	</c:choose>
 	<p><a href="home.do">Return to main page</a></p>
 </div>
 </body>

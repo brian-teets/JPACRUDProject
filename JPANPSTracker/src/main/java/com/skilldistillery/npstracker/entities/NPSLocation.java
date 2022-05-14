@@ -29,8 +29,21 @@ public class NPSLocation {
 	
 	
 	public NPSLocation() {}
+	
+	public NPSLocation(int id, String name, boolean hasVisited, LocalDate dateVisited, String state, String region,
+			String npsDesignation, String description) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.hasVisited = hasVisited;
+		this.dateVisited = dateVisited;
+		this.state = state;
+		this.region = region;
+		this.npsDesignation = npsDesignation;
+		this.description = description;
+	}
 
-
+	
 	public int getId() {
 		return id;
 	}

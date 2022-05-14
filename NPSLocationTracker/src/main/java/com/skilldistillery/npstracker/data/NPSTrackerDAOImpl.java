@@ -16,6 +16,7 @@ public class NPSTrackerDAOImpl implements NPSTrackerDAO {
 	
 	@PersistenceContext
 	private EntityManager em;
+	
 
 	@Override
 	public NPSLocation findById(int NPSLocationId) {
@@ -41,6 +42,19 @@ public class NPSTrackerDAOImpl implements NPSTrackerDAO {
 		String jpql = "SELECT loc FROM NPSLocation loc";
 		List<NPSLocation> locations = em.createQuery(jpql, NPSLocation.class).getResultList();
 		return locations;  
+	}
+
+	@Override
+	public NPSLocation create(NPSLocation location) {
+		em.getTransaction().begin();
+		
+		em.persist(location);
+		
+		em.getTransaction().commit();
+		
+		return location; 
 	} 
+	
+	
 
 }
