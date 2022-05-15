@@ -24,7 +24,7 @@
 				<div class="col"> 
 					<h5>Add a new location record</h5>
 					<form action="createLocation.do" method="POST">
-						Name of NPS Location: <input type="text" name="" size="25">
+						Name of NPS Location: <input type="text" name="newLocationName" size="25">
 						<input type="submit" value="Add Location">
 					</form>
 				</div>

@@ -1,9 +1,18 @@
 @charset "UTF-8";
 
-body {
+:root {
 	max-width: 900px; 
 	margin: 0 auto;
-	background-color: #F4F4F9; /* Ghost White from coolors.co */
+}
+
+body {
+	
+	background-color: #F4F4F9;  /* Ghost White from coolors.co */
+	background-image: url(../images/rocky-mountain-topo-cropped.jpg);
+  	background-repeat: no-repeat;
+  	background-size: contain;
+  	background-color: rgba(255, 255, 255, 0.7);
+ 	background-blend-mode: color;
 }
 
 table, th, td {

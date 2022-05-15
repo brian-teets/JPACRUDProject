@@ -29,11 +29,13 @@ public class NPSTrackerController {
 		return "results/singleLocation"; 
 	}
 	
-//	@RequestMapping
-//	public NPSLocation createLocation() {
-//		NPSLocation
-//		return "results/singleLocation"; 
-//	}
+	@RequestMapping(path={"createLocation.do"}) 
+	public String createLocation(String newLocationName, Model model) {
+		NPSLocation createLocation = new NPSLocation();
+		createLocation.setName(newLocationName); 
+		model.addAttribute("newLocation", createLocation); // new object not just field 
+		return "results/newLocation"; 
+	}
 	
 
 }

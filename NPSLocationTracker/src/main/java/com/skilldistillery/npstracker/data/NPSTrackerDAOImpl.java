@@ -46,9 +46,9 @@ public class NPSTrackerDAOImpl implements NPSTrackerDAO {
 
 	@Override
 	public NPSLocation create(NPSLocation location) {
-		em.getTransaction().begin();
+		
 		em.persist(location);
-		em.getTransaction().commit();
+		em.flush();
 		
 		return location; 
 	} 
