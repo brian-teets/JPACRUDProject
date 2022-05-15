@@ -10,53 +10,60 @@
 </head>
 <body>
 	<div class="container">
-		<h1>My NPS Tracker</h1>
-		<div class="container">
+		<header class="border border-2 rounded-2">
+			<h1>My NPS Tracker</h1>
+		</header>
+		<div class="container border border-2 rounded-2" id="searchAndAdd">
 			<div class="row">
 
 				<div class="col">
 					<h5>Search for a location by Id</h5>
 					<form action="getLocation.do?npsid=${location.id}" method="GET">
 						Location ID: <input type="text" name="npsid" size="3"> <br>
-						<input type="submit" value="Find Location">
+						<input class="btn btn-primary" type="submit" value="Find Location">
 					</form>
 				</div>
-				<div class="col"> 
+				<div class="col">
 					<h5>Add a new location record</h5>
 					<form action="createLocation.do" method="POST">
-						Name of NPS Location: <input type="text" name="newLocationName" size="25"> <br> 
-						<input type="submit" value="Add Location">
+						Name of NPS Location: <input type="text" name="newLocationName"
+							size="25"> <br> <input class="btn btn-primary"
+							type="submit" value="Add Location">
 					</form>
 				</div>
 			</div>
 		</div>
-		<hr>
-		<div>
-			<h5>Click the location name to view more details.</h5>
-			<table>
-				<thead>
-					<tr>
-						<th>ID</th>
-						<th>Name</th>
-						<th>Visited</th>
-						<th>State</th>
-						<th>Region</th>
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach var="nps" items="${locations}">
-						<!-- items map to:  -->
-						<tr>
-							<td>${nps.id}</td>
-							<td><a href="getLocation.do?npsid=${nps.id}">${nps.name}
-							</a></td>
-							<td>${nps.hasVisited}</td>
-							<td>${nps.state}</td>
-							<td>${nps.region}</td>
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h5>Click the location name to view more details.</h5>
+					<table>
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Name</th>
+								<th>Visited</th>
+								<th>State</th>
+								<th>Region</th>
+							</tr>
+						</thead>
+						<tbody>
+							<c:forEach var="nps" items="${locations}">
+								<!-- items map to:  -->
+								<tr>
+									<td>${nps.id}</td>
+									<td><a href="getLocation.do?npsid=${nps.id}">${nps.name}
+									</a></td>
+									<td>${nps.hasVisited}</td>
+									<td>${nps.state}</td>
+									<td>${nps.region}</td>
+								</tr>
+							</c:forEach>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </body>

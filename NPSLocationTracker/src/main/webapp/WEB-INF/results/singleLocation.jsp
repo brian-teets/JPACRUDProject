@@ -31,15 +31,15 @@
 				</c:otherwise>
 			</c:choose>
 			<p>
-				<a href="updateLocationView.do?id=${location.id}">Click here to
+				<a href="updateLocationView.do?id=${location.id}" class="btn btn-primary">Click here to
 					UPDATE this record</a>
 			</p>
 			<p>
-				<a href="delete.do?id=${location.id}">Click here to DELETE this
+				<a href="delete.do?id=${location.id}" class="btn btn-primary">Click here to DELETE this
 					record</a>
 			</p>
 			<p>
-				<a href="home.do">Return to main page</a>
+				<a href="home.do" class="btn btn-primary">Return to main page</a>
 			</p>
 
 		</form>

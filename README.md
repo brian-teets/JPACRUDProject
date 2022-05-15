@@ -1,1 +1,1 @@
-# JPACRUDProject
+# JPA CRUD Project

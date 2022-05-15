@@ -9,20 +9,23 @@
 <jsp:include page="../bootStrapHead.jsp" />
 </head>
 <body>
-	
-		<div class="container">
-			<h2>Deleted Location</h2>
-			<c:choose >
-			<c:when test="${deleted}"><h4>Successfully Deleted</h4></c:when>
-			<c:otherwise><h4>Location was not deleted</h4></c:otherwise>
-				 
-			</c:choose>
 
-			<p>
-				<a href="home.do">Return to main page</a> 
-			</p>
+	<div class="container">
+		<h2>Deleted Location</h2>
+		<c:choose>
+			<c:when test="${deleted}">
+				<h4>Successfully Deleted</h4>
+			</c:when>
+			<c:otherwise>
+				<h4>Location was not deleted</h4>
+			</c:otherwise>
 
-		</div>
-	
+		</c:choose>
+		<p>
+			<a href="home.do" class="btn btn-primary">Return to main page</a>
+		</p>
+	</div>
+
+
 </body>
 </html>

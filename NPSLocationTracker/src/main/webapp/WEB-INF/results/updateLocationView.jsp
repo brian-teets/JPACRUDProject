@@ -12,6 +12,7 @@
 	
 		<div class="container">
 			<h2>Update A Location</h2>
+			<div>
 			<form action="updateLocation.do" method="POST">
 			ID:  <input type="text" name="id" value="${location.id}" size="3" readonly/><br>
 
@@ -24,13 +25,14 @@
 			NPS Designation: <input type="text" name="npsDesignation" size="25" value="${location.npsDesignation}"/> <br>
 			Description: <input type="text" name="description" size="75" value="${location.description}"/> <br><br> 
 			
-			<input type="submit" value="Update Location">
+			<input type="submit" value="Update Location" class="btn btn-primary">
 			</form>
+			</div>
 			<p>
-				<a href="home.do">Return to main page</a> 
+				<a href="home.do" class="btn btn-primary">Return to main page</a> 
 			</p>
-
 		</div>
+		
 	
 </body>
 </html>
