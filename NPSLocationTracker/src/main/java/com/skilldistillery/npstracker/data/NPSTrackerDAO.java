@@ -10,5 +10,7 @@ public interface NPSTrackerDAO {
 	List<NPSLocation> findByKeyword(String keyword); 
 	List<NPSLocation> findAll();
 	NPSLocation create(NPSLocation location); 
+	NPSLocation update(NPSLocation location, int id); 
+	Boolean delete(int id); 
 
 }

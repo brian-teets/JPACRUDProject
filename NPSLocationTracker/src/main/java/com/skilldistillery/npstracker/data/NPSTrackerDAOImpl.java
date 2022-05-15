@@ -51,8 +51,35 @@ public class NPSTrackerDAOImpl implements NPSTrackerDAO {
 		em.flush();
 		
 		return location; 
+	}
+
+	@Override
+	public NPSLocation update(NPSLocation location, int id) {
+		
+		NPSLocation managed =  em.find(NPSLocation.class, id); 
+		managed.setName(location.getName());
+		managed.setHasVisited(location.isHasVisited()); 
+		managed.setDateVisited(location.getDateVisited()); 
+		managed.setState(location.getState()); 
+		managed.setRegion(location.getRegion()); 
+		managed.setNpsDesignation(location.getNpsDesignation()); 
+		managed.setDescription(location.getDescription()); 
+		
+		return managed; 
+	}
+
+	@Override
+	public Boolean delete(int id) {
+		NPSLocation toDelete = em.find(NPSLocation.class, id); 
+		
+		boolean result = false;
+		
+		if(toDelete != null) {
+			em.remove(toDelete);
+			result = ! em.contains(toDelete);
+		}
+		 
+		return result; 
 	} 
-	
-	
 
 }

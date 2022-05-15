@@ -31,6 +31,12 @@
 				</c:otherwise>
 			</c:choose>
 			<p>
+				<a href="updateLocationView.do?id=${location.id}">Click here to UPDATE this record</a> 
+			</p>
+			<p>
+				<a href="delete.do?id=${location.id}">Click here to DELETE this record</a> 
+			</p>
+			<p>
 				<a href="home.do">Return to main page</a>
 			</p>
 
