@@ -10,13 +10,14 @@
 </head>
 <body>
 	
-		<div>
+		<div class="container">
 			<h2>Update A Location</h2>
 			<form action="updateLocation.do" method="POST">
 			ID:  <input type="text" name="id" value="${location.id}" size="3" readonly/><br>
 
 			NPS Location Name: <input type="text" name="name" size="25" value="${location.name}"/> <br>
-			Visited? (check to set to true): <input type="checkbox" name="hasVisited" value="${location.hasVisited}"/> <br>
+			Visited?: <input type="checkbox" name="hasVisited" value="${location.hasVisited}"/> <br>
+			
 			Date Visited: <input type="date" name="date" value="${location.dateVisited}"/> <br>
 			State: <input type="text" name="state" size="25" value="${location.state}"/> <br>
 			Region: <input type="text" name="region" size="25" value="${location.region}"/> <br>

@@ -9,7 +9,7 @@
 <jsp:include page="../bootStrapHead.jsp" />
 </head>
 <body>
-		<div>
+		<div class="container">
 			<h2>Location Search Result</h2>
 
 			<c:choose>
@@ -29,6 +29,12 @@
 					<h5>No location found for that Id.</h5>
 				</c:otherwise>
 			</c:choose>
+			<p>
+				<a href="updateLocationView.do?id=${newLocation.id}">Click here to UPDATE this record</a> 
+			</p>
+			<p>
+				<a href="delete.do?id=${newLocation.id}">Click here to DELETE this record</a> 
+			</p>
 			<p>
 				<a href="home.do">Return to main page</a>
 			</p>

@@ -10,7 +10,7 @@
 </head>
 <body>
 	
-		<div>
+		<div class="container">
 			<h2>Deleted Location</h2>
 			<c:choose >
 			<c:when test="${deleted}"><h4>Successfully Deleted</h4></c:when>

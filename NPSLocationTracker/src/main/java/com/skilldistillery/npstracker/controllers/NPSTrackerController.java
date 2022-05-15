@@ -42,18 +42,18 @@ public class NPSTrackerController {
 	
 	@RequestMapping(path={"updateLocation.do"})
 	public String updateLocation(int id, String name, String state, String region, // maybe later try adding boolean and date back in 
-			String npsDesignation, String description, String date, Model model) {
+			String npsDesignation, String description, String date, boolean hasVisited, Model model) {
 		NPSLocation updatedLocation = new NPSLocation();
 		
 		LocalDate dateVisited = LocalDate.parse(date);
 		
 		updatedLocation.setName(name); // map to variable name on jsp form 
-//		updatedLocation.setHasVisited(hasVisited); 
-		updatedLocation.setDateVisited(dateVisited);
 		updatedLocation.setState(state);
 		updatedLocation.setRegion(region);
 		updatedLocation.setNpsDesignation(npsDesignation);
 		updatedLocation.setDescription(description); 
+		updatedLocation.setDateVisited(dateVisited);
+		updatedLocation.setHasVisited(hasVisited); 
 		
 		NPSLocation showUpdatedLocation = dao.update(updatedLocation, id);
 		model.addAttribute("location", showUpdatedLocation); 

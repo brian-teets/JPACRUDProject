@@ -9,8 +9,8 @@
 <jsp:include page="../bootStrapHead.jsp" />
 </head>
 <body>
-	<form action="singleLocation.do" method="POST">
-		<div>
+	<div class="container">
+		<form action="singleLocation.do" method="POST">
 			<h2>Location Search Result</h2>
 
 			<c:choose>
@@ -31,16 +31,18 @@
 				</c:otherwise>
 			</c:choose>
 			<p>
-				<a href="updateLocationView.do?id=${location.id}">Click here to UPDATE this record</a> 
+				<a href="updateLocationView.do?id=${location.id}">Click here to
+					UPDATE this record</a>
 			</p>
 			<p>
-				<a href="delete.do?id=${location.id}">Click here to DELETE this record</a> 
+				<a href="delete.do?id=${location.id}">Click here to DELETE this
+					record</a>
 			</p>
 			<p>
 				<a href="home.do">Return to main page</a>
 			</p>
 
-		</div>
-	</form>
+		</form>
+	</div>
 </body>
 </html>
