@@ -13,15 +13,15 @@
 		<div>
 			<h2>Update A Location</h2>
 			<form action="updateLocation.do" method="POST">
-			ID:  <input type="text" name="id" value="${location.id}" readonly/><br>
+			ID:  <input type="text" name="id" value="${location.id}" size="3" readonly/><br>
 
-			NPS Location Name: <input type="text" name="name" size="55" value="${location.name}"/> <br>
+			NPS Location Name: <input type="text" name="name" size="25" value="${location.name}"/> <br>
 			Visited? (check to set to true): <input type="checkbox" name="hasVisited" value="${location.hasVisited}"/> <br>
-			Date Visited: <input type="datetime-local" name="dateVisited" value="${location.dateVisited}"/> <br>
-			State: <input type="text" name="state" size="55" value="${location.state}"/> <br>
-			Region: <input type="text" name="region" size="55" value="${location.region}"/> <br>
-			NPS Designation: <input type="text" name="npsDesignation" size="55" value="${location.npsDesignation}"/> <br>
-			Description: <input type="text" name="description" value="${location.description}"/> <br><br> 
+			Date Visited: <input type="date" name="date" value="${location.dateVisited}"/> <br>
+			State: <input type="text" name="state" size="25" value="${location.state}"/> <br>
+			Region: <input type="text" name="region" size="25" value="${location.region}"/> <br>
+			NPS Designation: <input type="text" name="npsDesignation" size="25" value="${location.npsDesignation}"/> <br>
+			Description: <input type="text" name="description" size="75" value="${location.description}"/> <br><br> 
 			
 			<input type="submit" value="Update Location">
 			</form>
