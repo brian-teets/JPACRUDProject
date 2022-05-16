@@ -24,7 +24,7 @@ For my project, I wanted to create a full-stack application to start to track Na
 
 #### With the Application Deployed to AWS:
 
-- User will land on the index page of application via provided i.p address. 
+- User will land on the index page of application via provided i.p address: `http://52.8.112.153:8080/NPSLocationTracker/`. 
 - 14 records have already been included on the main page as part of the SQL insert.
      - Click the name of any NPS location to view more details on a new page.
 - Use the `Search by Id` option located on the left side of the page. The single result will display on a result page.
